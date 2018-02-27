@@ -1,0 +1,55 @@
+#header [type="checkbox"] {
+    display: none;
+}
+#header label.toggle-nav {
+    display: none;
+    float: right;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+#header label.toggle-nav .fa{
+    margin-top: 12px;
+    margin-right: 12px;
+    font-size: 25px;
+}
+@media all and (max-width: 800px) {
+    #home {
+        height: 400px;
+    }
+    #header label.toggle-nav {
+        display: inline-block;
+    }
+    .nav {
+        display: none;
+    }
+    #menu>div {
+        margin: 0 20px;
+    }
+    input.toggle-nav:checked ~ .nav {
+        margin-top: 50px;
+        margin-right: -34px;
+        display: block;
+    }
+    input.toggle-nav:checked ~ .nav li {
+        float: none;
+        display: block;
+        background-color: white;
+        padding: 2px;
+    }
+    .logo {
+        margin-left: 12px;
+    }
+}
+@media all and (max-width: 480px){
+    #home {
+        height: 250px;
+    }
+    .buttons {
+        margin-top: 90px;
+    }
+    #menu-title {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}

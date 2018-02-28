@@ -1,54 +1,79 @@
-#header [type="checkbox"] {
+.header [type="checkbox"] {
     display: none;
 }
-#header label.toggle-nav {
+.header .toggle-nav__label {
     display: none;
     float: right;
-    height: 100%;
+    /*height: 100%;*/
     cursor: pointer;
     position: relative;
 }
-#header label.toggle-nav .fa{
+.header .toggle-nav__label .fa{
     margin-top: 12px;
     margin-right: 12px;
     font-size: 25px;
 }
+@media all and (max-width: 906px) {
+    .menu__item {
+        padding: 0 40px;
+    }
+}
 @media all and (max-width: 800px) {
-    #home {
+    .home {
         height: 400px;
     }
-    #header label.toggle-nav {
+    .header .toggle-nav__label {
         display: inline-block;
     }
     .nav {
-        display: none;
+        max-height: 0;
+        width: 130px;
+        margin-top: 50px;
+        transition: max-height 2s ease-out;
     }
-    #menu>div {
+    .nav__item {
+        margin-left: 0;
+        font-size: 20px;
+    }
+    .nav__item:hover {
+        font-size: 25px;
+    }
+    .menu__item {
         margin: 0 20px;
     }
-    input.toggle-nav:checked ~ .nav {
-        margin-top: 50px;
+    .toggle-nav:checked ~ .nav {
         margin-right: -34px;
-        display: block;
+        /*display: block;*/
+        max-height: 266px;
     }
-    input.toggle-nav:checked ~ .nav li {
+    .toggle-nav:checked ~ .nav .nav__item {
         float: none;
         display: block;
         background-color: white;
         padding: 2px;
     }
+    .header .toggle-nav:checked {
+        /*height: 200px;*/
+
+    }
     .logo {
         margin-left: 12px;
     }
+    .info {
+        padding-top: 100px;
+    }
 }
 @media all and (max-width: 480px){
-    #home {
+    .home {
         height: 250px;
     }
-    .buttons {
-        margin-top: 90px;
+    .info {
+        padding-top: 70px;
     }
-    #menu-title {
+    .info__main-text {
+        font-size: 25px;
+    }
+    .menu__title {
         margin-top: 50px;
         margin-bottom: 50px;
     }

@@ -10,6 +10,7 @@ body {
 .header{
     /*height: 50px;*/
     overflow: hidden;
+    background-color: #e8e8e8;
 
 }
 .home {
@@ -91,9 +92,14 @@ body {
 .menu {
     margin: auto;
 }
+
 .menu__item {
+    background-color: #E8E8E8;
     width: 220px;
     display: inline-block;
+}
+.menu :first-child {
+    background-color: white;
 }
 .menu>.menu__item>.menu__item-paragraph {
     width: 180px;
